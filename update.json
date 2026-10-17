@@ -1,0 +1,25 @@
+{
+  "draft": false,
+  "assets": [
+    {
+      "name": "AccountSecurity-windows-x64.zip",
+      "browser_download_url": "https://github.com/salah-del/Sirar/releases/download/v1.0.1/AccountSecurity-windows-x64.zip",
+      "digest": "sha256:8dfac3ae225989a82dccfda2dc0732cf3a96c4ad57f665df53da00f484ee01e8",
+      "size": 81827254
+    },
+    {
+      "name": "PhishingChallenge-windows-x64.zip",
+      "browser_download_url": "https://github.com/salah-del/Sirar/releases/download/v1.0.1/PhishingChallenge-windows-x64.zip",
+      "digest": "sha256:9501a7e5479d0ca8b36cadda56fcb56c3339c9fce9a3e606abc7f7a2e51838e7",
+      "size": 81827702
+    },
+    {
+      "name": "SHA256SUMS.txt",
+      "browser_download_url": "https://github.com/salah-del/Sirar/releases/download/v1.0.1/SHA256SUMS.txt",
+      "digest": "sha256:7ab6c1ec1f96e9a4ec9327ec8a4a1db0c79611466e70b29ec533ca7820e424b7",
+      "size": 200
+    }
+  ],
+  "prerelease": false,
+  "tag_name": "v1.0.1"
+}
