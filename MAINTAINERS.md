@@ -24,3 +24,6 @@ Publish both full packages and all intended patches as one verified release. The
 The clients read the lightweight manifest about every ten seconds with cache revalidation and retry backoff. They do not call the releases REST API at that frequency, because its [unauthenticated limit is 60 requests/hour per IP](https://docs.github.com/en/rest/using-the-rest-api/rate-limits-for-the-rest-api). Hosting and network delays still apply; this is not a push-notification service.
 
 Patch installers validate all original packaged files against SHA-256 before changing anything. Modified or mismatched installations are rejected; unrelated user files are preserved. Test real patch application, removed files, base mismatch, corruption, rollback, and equality with the complete target package before publishing.
+
+### Manifest transport correction (1.0.3)
+During live testing, the branch-file URL served an older manifest despite cache-busting. Clients from 1.0.3 use `/releases/latest/download/release-update.json` instead. `PublishRelease.ps1` uploads this manifest into the draft after ZIP verification, then publishes the release, then updates the branch manifest only for compatibility with 1.0.2. Always prepare the release manifest before making a release public.
