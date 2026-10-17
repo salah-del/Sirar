@@ -34,6 +34,8 @@ When internet access is available, the app checks this repository for a newer st
 
 Downloads are checked against the SHA-256 digest published by GitHub. The installer backs up replaced files and attempts rollback if installation fails. An offline connection does not prevent the experience from running. Choose **Later** to defer an offer for the current session. Keep the app folder writable and retain the complete extracted folder.
 
+<img src="assets/update-progress.png" alt="Sirar update progress screen showing download size, percentage and time remaining" width="300">
+
 ## Requirements and help
 
 - Windows 10 or 11, 64-bit; compatible graphics drivers.
@@ -43,4 +45,5 @@ Downloads are checked against the SHA-256 digest published by GitHub. The instal
 - **[All releases and checksums](https://github.com/salah-del/Sirar/releases)** · **[Report a problem](https://github.com/salah-del/Sirar/issues)**
 
 This repository distributes the Windows applications. It does not publish the Unity project or third-party asset sources. Branding and bundled assets remain subject to their respective owners' rights; dependency notices are included with the applications.
+
 
