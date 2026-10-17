@@ -4,11 +4,13 @@ Two interactive Windows experiences. Inspect suspicious messages, protect a prac
 
 ## Download for Windows
 
-<a href="https://github.com/salah-del/Sirar/releases/latest/download/PhishingChallenge-windows-x64.zip"><img alt="Download Phishing Challenge for Windows" src="assets/download-phishing.svg" width="360"></a>
+<a href="https://github.com/salah-del/Sirar/releases/download/v1.0.3/PhishingChallenge-windows-x64.zip"><img alt="Download Phishing Challenge for Windows" src="assets/download-phishing.svg" width="360"></a>
 
-<a href="https://github.com/salah-del/Sirar/releases/latest/download/AccountSecurity-windows-x64.zip"><img alt="Download Account Security for Windows" src="assets/download-account.svg" width="360"></a>
+<a href="https://github.com/salah-del/Sirar/releases/download/v1.0.3/AccountSecurity-windows-x64.zip"><img alt="Download Account Security for Windows" src="assets/download-account.svg" width="360"></a>
 
-**[Phishing Challenge — download ZIP](https://github.com/salah-del/Sirar/releases/latest/download/PhishingChallenge-windows-x64.zip)** · **[Account Security — download ZIP](https://github.com/salah-del/Sirar/releases/latest/download/AccountSecurity-windows-x64.zip)**
+**[Phishing Challenge — download ZIP](https://github.com/salah-del/Sirar/releases/download/v1.0.3/PhishingChallenge-windows-x64.zip)** · **[Account Security — download ZIP](https://github.com/salah-del/Sirar/releases/download/v1.0.3/AccountSecurity-windows-x64.zip)**
+
+The buttons download the complete **1.0.3 starter version** for first installation. Open it and use **Download update** to receive the latest changed files. Releases from **1.0.4 onward contain updates only**; do not extract a patch as a standalone application.
 
 ### Start in three steps
 
@@ -34,7 +36,7 @@ Starting with version 1.0.3, the app checks a small manifest attached to the lat
 
 Choose **Download update**. When a patch for your installed version is available, **only changed files are downloaded**. The screen shows the package size, downloaded/total megabytes, percentage, elapsed time and estimated time remaining. The app verifies the download and installed base files, closes, applies the changes, and restarts. Unchanged images, videos and runtime files are retained. Replaced or removed files are backed up for rollback if installation fails.
 
-**One-time transition:** versions 1.0.0 and 1.0.1 only understand full update packages and check every five minutes at the home screen. Return home and restart once to trigger that older check promptly. They must receive version 1.0.3 once through their existing in-app updater before incremental downloads and faster detection become available. No manual uninstall is required. If no compatible patch exists for a future version, the app clearly labels a full package before download.
+**One-time transition:** versions 1.0.0 and 1.0.1 only understand full update packages and check every five minutes at the home screen. Return home and restart once to trigger that older check promptly. For these legacy clients, download the 1.0.3 starter using the buttons above and extract it to a new folder once. The latest patch-only release cannot be installed by their old updater. No manual uninstall is required. Updates are published for supported exact baseline versions. Keep the original installed files intact so verification succeeds.
 
 Downloads are checked against GitHub's published SHA-256 digest. Offline use of the learning scenarios remains available; failed checks retry with backoff. Choose **Later** to defer an offer for the current session. Keep the app folder writable and retain the complete extracted folder.
 
