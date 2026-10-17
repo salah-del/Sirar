@@ -1,29 +1,21 @@
-# Publishing a new version
+# Publishing updates only
 
 The Unity project is maintained separately from this distribution repository.
 
-1. Set `PlayerSettings.bundleVersion` to a higher three-part version, e.g. `1.0.1`.
-2. Keep the updater repository configured as `salah-del/Sirar`.
-3. Build and test both Windows applications. Test both correct and retry routes, password lengths, portrait layout, magnifier interactions, and update failure recovery.
-4. Package the complete application folders, excluding Unity debug/backup folders. Keep these exact asset names:
-   - `PhishingChallenge-windows-x64.zip`
-   - `AccountSecurity-windows-x64.zip`
-5. Create a **draft** GitHub release with tag `v1.0.1`. Upload both ZIPs plus `SHA256SUMS.txt`.
-6. Verify GitHub's SHA-256 asset digests match your local ZIP hashes, then publish the release as the latest stable release. Never publish a partially uploaded release.
+1. Increase PlayerSettings.bundleVersion, build both apps, and verify the change.
+2. Run Tools/PackageRelease.ps1 -Version <new>. Complete ZIPs stay LOCAL as reference builds. By default the script generates patches from every retained compatible release baseline (1.0.2 onward), so skipping a release still works. Keep those exact baseline packages; do not silently omit supported installed versions.
+3. Run Tools/TestReleasePatch.ps1 for each baseline against the new version. Every patched file must match the local complete target package.
+4. Create a draft GitHub release. Run Tools/PublishRelease.ps1 -Version <new>. It uploads ONLY patch ZIPs, their SHA256SUMS and the release-update.json manifest. It refuses a draft containing full application ZIPs. It verifies hashes before publication and updates the legacy branch manifest afterward.
+5. Verify automatic discovery and compatible patch selection in a running previous client.
 
-The bundled updater checks stable releases only. It does not install a version equal to or older than the installed version. GitHub account credentials are never included in the applications.
+## First installation
 
-Before broader deployment, test an actual previous-build-to-new-build update on a Windows device with the intended installation permissions. Automated helper tests do not replace this deployment check.
+README download buttons deliberately point to complete release 1.0.3, the retained starter. After first launch its updater downloads a compatible patch to the latest release. Never change these buttons to latest/download/full.zip: update-only releases have no full ZIPs. Never delete the starter release or its assets.
 
-## Incremental updates and fast discovery (1.0.2+)
+Clients 1.0.0/1.0.1 only understand full update packages; they need the starter download once. Clients 1.0.2 use the branch manifest, and 1.0.3 onward use the manifest attached to the latest release. Keep patches for 1.0.2 and 1.0.3, as well as all later supported versions.
 
-Build complete packages for new installs and old updaters, then generate file-level patches from each supported baseline's *exact published ZIP*. Local command: `Tools/PackageRelease.ps1 -Version <new> -BaseVersion <old>`. `Tools/package_patch.py` can add additional supported baselines. Include all patch ZIPs in the release and regenerate SHA256SUMS for every ZIP.
+## Verification and security
 
-Publish both full packages and all intended patches as one verified release. Then run `Tools/PublishUpdateManifest.ps1 -Version <new>` to update `update.json` in this repository. `Tools/PublishRelease.ps1` does both steps automatically. Never publish a manifest pointing to incomplete, draft or unverified assets.
+The updater polls about every 10 seconds; this is not instantaneous push delivery. Patch installers validate SHA-256 for the archive and baseline files, preserve unrelated files, and back up replacements for rollback. Test compatibility and actual installed-player updates before broader deployment. No GitHub credentials are bundled.
 
-The clients read the lightweight manifest about every ten seconds with cache revalidation and retry backoff. They do not call the releases REST API at that frequency, because its [unauthenticated limit is 60 requests/hour per IP](https://docs.github.com/en/rest/using-the-rest-api/rate-limits-for-the-rest-api). Hosting and network delays still apply; this is not a push-notification service.
-
-Patch installers validate all original packaged files against SHA-256 before changing anything. Modified or mismatched installations are rejected; unrelated user files are preserved. Test real patch application, removed files, base mismatch, corruption, rollback, and equality with the complete target package before publishing.
-
-### Manifest transport correction (1.0.3)
-During live testing, the branch-file URL served an older manifest despite cache-busting. Clients from 1.0.3 use `/releases/latest/download/release-update.json` instead. `PublishRelease.ps1` uploads this manifest into the draft after ZIP verification, then publishes the release, then updates the branch manifest only for compatibility with 1.0.2. Always prepare the release manifest before making a release public.
+Current executables are unsigned. Removing SmartScreen warnings is not a Unity setting; trusted publisher signing requires an external certificate/service and does not guarantee instant reputation. See https://learn.microsoft.com/en-us/windows/apps/package-and-deploy/smartscreen-reputation .
