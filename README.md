@@ -30,9 +30,13 @@ Designed for portrait touch displays, with mouse and keyboard support and respon
 
 ## Updates inside the app
 
-When internet access is available, the app checks this repository for a newer stable release. At the home screen, choose **Download update** to download it. The themed progress screen displays downloaded/total megabytes, percentage, elapsed time, estimated time remaining, and verification status; the app then closes, replaces its files, and restarts.
+Starting with version 1.0.2, the app checks a small public update manifest about every **10 seconds** while online, including in the background, and checks again when it regains focus. A newer version opens the update screen automatically from any page after an active decision animation finishes. This is frequent polling, not instantaneous push delivery; network failures and hosting propagation can add delay.
 
-Downloads are checked against the SHA-256 digest published by GitHub. The installer backs up replaced files and attempts rollback if installation fails. An offline connection does not prevent the experience from running. Choose **Later** to defer an offer for the current session. Keep the app folder writable and retain the complete extracted folder.
+Choose **Download update**. When a patch for your installed version is available, **only changed files are downloaded**. The screen shows the package size, downloaded/total megabytes, percentage, elapsed time and estimated time remaining. The app verifies the download and installed base files, closes, applies the changes, and restarts. Unchanged images, videos and runtime files are retained. Replaced or removed files are backed up for rollback if installation fails.
+
+**One-time transition:** versions 1.0.0 and 1.0.1 only understand full update packages and check every five minutes at the home screen. Return home and restart once to trigger that older check promptly. They must receive version 1.0.2 once through their existing in-app updater before incremental downloads and faster detection become available. No manual uninstall is required. If no compatible patch exists for a future version, the app clearly labels a full package before download.
+
+Downloads are checked against GitHub's published SHA-256 digest. Offline use of the learning scenarios remains available; failed checks retry with backoff. Choose **Later** to defer an offer for the current session. Keep the app folder writable and retain the complete extracted folder.
 
 <img src="assets/update-progress.png" alt="Sirar update progress screen showing download size, percentage and time remaining" width="300">
 
@@ -45,5 +49,6 @@ Downloads are checked against the SHA-256 digest published by GitHub. The instal
 - **[All releases and checksums](https://github.com/salah-del/Sirar/releases)** · **[Report a problem](https://github.com/salah-del/Sirar/issues)**
 
 This repository distributes the Windows applications. It does not publish the Unity project or third-party asset sources. Branding and bundled assets remain subject to their respective owners' rights; dependency notices are included with the applications.
+
 
 
