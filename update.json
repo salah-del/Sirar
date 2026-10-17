@@ -2,24 +2,36 @@
   "draft": false,
   "assets": [
     {
+      "name": "AccountSecurity-update-1.0.1-to-1.0.2.zip",
+      "browser_download_url": "https://github.com/salah-del/Sirar/releases/download/v1.0.2/AccountSecurity-update-1.0.1-to-1.0.2.zip",
+      "digest": "sha256:5b2b6c24db19f5d62f2c9c5d036f4f66588047df9ef61e782c908d52d5b40e1b",
+      "size": 9248755
+    },
+    {
       "name": "AccountSecurity-windows-x64.zip",
-      "browser_download_url": "https://github.com/salah-del/Sirar/releases/download/v1.0.1/AccountSecurity-windows-x64.zip",
-      "digest": "sha256:8dfac3ae225989a82dccfda2dc0732cf3a96c4ad57f665df53da00f484ee01e8",
-      "size": 81827254
+      "browser_download_url": "https://github.com/salah-del/Sirar/releases/download/v1.0.2/AccountSecurity-windows-x64.zip",
+      "digest": "sha256:5ef1c53cb2d10bfc782a7a2bab416e1962477852109890e114e5197a5fca3cd7",
+      "size": 81828754
+    },
+    {
+      "name": "PhishingChallenge-update-1.0.1-to-1.0.2.zip",
+      "browser_download_url": "https://github.com/salah-del/Sirar/releases/download/v1.0.2/PhishingChallenge-update-1.0.1-to-1.0.2.zip",
+      "digest": "sha256:210db525999eaed28062e589e8401345741f3e72ad2402893062d12be1419341",
+      "size": 9248800
     },
     {
       "name": "PhishingChallenge-windows-x64.zip",
-      "browser_download_url": "https://github.com/salah-del/Sirar/releases/download/v1.0.1/PhishingChallenge-windows-x64.zip",
-      "digest": "sha256:9501a7e5479d0ca8b36cadda56fcb56c3339c9fce9a3e606abc7f7a2e51838e7",
-      "size": 81827702
+      "browser_download_url": "https://github.com/salah-del/Sirar/releases/download/v1.0.2/PhishingChallenge-windows-x64.zip",
+      "digest": "sha256:26607f1105d151c9c3f00ee315cdaec3487ba850b9b4fa22c5cfb7bbad439b20",
+      "size": 81829200
     },
     {
       "name": "SHA256SUMS.txt",
-      "browser_download_url": "https://github.com/salah-del/Sirar/releases/download/v1.0.1/SHA256SUMS.txt",
-      "digest": "sha256:7ab6c1ec1f96e9a4ec9327ec8a4a1db0c79611466e70b29ec533ca7820e424b7",
-      "size": 200
+      "browser_download_url": "https://github.com/salah-del/Sirar/releases/download/v1.0.2/SHA256SUMS.txt",
+      "digest": "sha256:f539aa3c9c289c40d583b6bc4241b60d5196fc7329b73ae848d5e65adc56a92d",
+      "size": 420
     }
   ],
-  "prerelease": false,
-  "tag_name": "v1.0.1"
+  "tag_name": "v1.0.2",
+  "prerelease": false
 }
