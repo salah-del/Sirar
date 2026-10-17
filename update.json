@@ -1,31 +1,31 @@
 {
+  "prerelease": false,
+  "draft": false,
   "assets": [
     {
-      "name": "AccountSecurity-update-1.0.2-to-1.0.3.zip",
-      "browser_download_url": "https://github.com/salah-del/Sirar/releases/download/v1.0.3/AccountSecurity-update-1.0.2-to-1.0.3.zip",
-      "digest": "sha256:2d7af998ce8265d2abe0fc33bd4a0276c94ef866865caba62af2e9b98483d55b",
-      "size": 9248755
+      "name": "AccountSecurity-update-1.0.3-to-1.0.4.zip",
+      "browser_download_url": "https://github.com/salah-del/Sirar/releases/download/v1.0.4/AccountSecurity-update-1.0.3-to-1.0.4.zip",
+      "digest": "sha256:d4630f8833599eee5de55305f5121aaa6250e97888102b1ca1d5a73ac233dc85",
+      "size": 159043
     },
     {
-      "name": "AccountSecurity-windows-x64.zip",
-      "browser_download_url": "https://github.com/salah-del/Sirar/releases/download/v1.0.3/AccountSecurity-windows-x64.zip",
-      "digest": "sha256:0ca3f6a9d0921b1d67d877743aa68b78c445b433c5ed4738985b6d07ef3abc9b",
-      "size": 81828750
+      "name": "PhishingChallenge-update-1.0.3-to-1.0.4.zip",
+      "browser_download_url": "https://github.com/salah-del/Sirar/releases/download/v1.0.4/PhishingChallenge-update-1.0.3-to-1.0.4.zip",
+      "digest": "sha256:ebf09ccacc705b97b25425d31af57ce998b80187815d1a85fbe7aefcad3445e8",
+      "size": 159079
     },
     {
-      "name": "PhishingChallenge-update-1.0.2-to-1.0.3.zip",
-      "browser_download_url": "https://github.com/salah-del/Sirar/releases/download/v1.0.3/PhishingChallenge-update-1.0.2-to-1.0.3.zip",
-      "digest": "sha256:68e1bc5cdbe18b698b3880501b301f3c12615e3e251d358b70a16b821ecce5ee",
-      "size": 9248790
+      "name": "AccountSecurity-update-1.0.2-to-1.0.4.zip",
+      "browser_download_url": "https://github.com/salah-del/Sirar/releases/download/v1.0.4/AccountSecurity-update-1.0.2-to-1.0.4.zip",
+      "digest": "sha256:2456c760479e476e5ce7f56aca7683bd21ad3f6d60a306917026a2b265f0b212",
+      "size": 9248810
     },
     {
-      "name": "PhishingChallenge-windows-x64.zip",
-      "browser_download_url": "https://github.com/salah-del/Sirar/releases/download/v1.0.3/PhishingChallenge-windows-x64.zip",
-      "digest": "sha256:2164630c7018352a2124db99f6d58762da6badaa616f8bfd507d7e407fa6a002",
-      "size": 81829197
+      "name": "PhishingChallenge-update-1.0.2-to-1.0.4.zip",
+      "browser_download_url": "https://github.com/salah-del/Sirar/releases/download/v1.0.4/PhishingChallenge-update-1.0.2-to-1.0.4.zip",
+      "digest": "sha256:e52f8de1a24bf3ee4cf34c0b8e12fde4ae2caa91c82d63bf201ca6fc3bd94871",
+      "size": 9248843
     }
   ],
-  "draft": false,
-  "tag_name": "v1.0.3",
-  "prerelease": false
+  "tag_name": "v1.0.4"
 }
