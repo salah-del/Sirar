@@ -30,7 +30,7 @@ Designed for portrait touch displays, with mouse and keyboard support and respon
 
 ## Updates inside the app
 
-When internet access is available, the app checks this repository for a newer stable release. At the home screen, choose **Update now** to download it. The themed progress screen displays download and verification status; the app then closes, replaces its files, and restarts.
+When internet access is available, the app checks this repository for a newer stable release. At the home screen, choose **Download update** to download it. The themed progress screen displays downloaded/total megabytes, percentage, elapsed time, estimated time remaining, and verification status; the app then closes, replaces its files, and restarts.
 
 Downloads are checked against the SHA-256 digest published by GitHub. The installer backs up replaced files and attempts rollback if installation fails. An offline connection does not prevent the experience from running. Choose **Later** to defer an offer for the current session. Keep the app folder writable and retain the complete extracted folder.
 
@@ -43,3 +43,4 @@ Downloads are checked against the SHA-256 digest published by GitHub. The instal
 - **[All releases and checksums](https://github.com/salah-del/Sirar/releases)** · **[Report a problem](https://github.com/salah-del/Sirar/issues)**
 
 This repository distributes the Windows applications. It does not publish the Unity project or third-party asset sources. Branding and bundled assets remain subject to their respective owners' rights; dependency notices are included with the applications.
+
